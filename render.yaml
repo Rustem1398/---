@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pharma-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: YOUR_TELEGRAM_BOT_TOKEN
+      - key: OPENAI_API_KEY
+        value: YOUR_OPENAI_API_KEY
